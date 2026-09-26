@@ -128,8 +128,8 @@
 
   h3 {
     color: var(--secondary);
-    margin: 18px 0 10px;
-    font-size: 1.1rem;
+    margin: 22px 0 10px;
+    font-size: 1.15rem;
   }
 
   p {
@@ -164,16 +164,16 @@
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin: 14px 0;
+    margin: 12px 0 18px;
     border-radius: 8px;
     border: 1px solid var(--border);
   }
 
   table {
     width: 100%;
-    min-width: 520px;
+    min-width: 560px;
     border-collapse: collapse;
-    font-size: 0.88rem;
+    font-size: 0.87rem;
   }
 
   th, td {
@@ -187,7 +187,7 @@
     background: var(--primary);
     color: white;
     font-weight: 600;
-    font-size: 0.84rem;
+    font-size: 0.83rem;
   }
 
   tr:nth-child(even) { background: #f8fafc; }
@@ -252,6 +252,18 @@
   .rank-easy { color: #276749; font-weight: 700; }
   .rank-hard { color: #c53030; font-weight: 700; }
 
+  .segment-label {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+
   footer {
     text-align: center;
     padding: 20px 16px calc(20px + var(--safe-bottom));
@@ -267,7 +279,7 @@
   }
 
   @media (min-width: 700px) {
-    table { min-width: 100%; font-size: 0.92rem; }
+    table { min-width: 100%; font-size: 0.91rem; }
     nav a { font-size: 0.92rem; padding: 10px 16px; }
   }
 </style>
@@ -419,19 +431,98 @@
     </div>
   </section>
 
-  <!-- 3. COMPARISON -->
+  <!-- 3. COMPARISON – BY BUSINESS SEGMENT -->
   <section id="comparison">
-    <h2>Market Comparison</h2>
+    <h2>Market Comparison by Segment</h2>
+    <p>Regional comparison broken out by business model. All facility-based models assume the ≤6–7 resident sweet spot.</p>
+
+    <!-- SENIOR BOARD & CARE -->
+    <h3><span class="segment-label">SEGMENT</span> Senior Board & Care (RCFE)</h3>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>Market</th>
+            <th>Region</th>
             <th>Demand</th>
             <th>Competition</th>
-            <th>Bed Rate (Sober)</th>
-            <th>Startup Burden</th>
-            <th>Zoning</th>
+            <th>Typical Monthly Rate</th>
+            <th>Startup / RE Burden</th>
+            <th>Zoning & Licensing Friction</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Orange County</strong></td>
+            <td>Very High</td>
+            <td>High</td>
+            <td>$5,000–$8,500+</td>
+            <td>Very High</td>
+            <td>Moderate–High</td>
+            <td>Strong private-pay; city-level scrutiny possible</td>
+          </tr>
+          <tr>
+            <td><strong>Los Angeles County</strong></td>
+            <td>Very High</td>
+            <td>High</td>
+            <td>$4,500–$8,000+</td>
+            <td>High</td>
+            <td>Moderate</td>
+            <td>Largest senior population; wide rate range by neighborhood</td>
+          </tr>
+          <tr>
+            <td><strong>San Diego County</strong></td>
+            <td>High</td>
+            <td>Moderate–High</td>
+            <td>$4,500–$7,500</td>
+            <td>High</td>
+            <td>Moderate (≤6 smoother)</td>
+            <td>Good balance of demand and livability</td>
+          </tr>
+          <tr>
+            <td><strong>Inland Empire</strong></td>
+            <td>Moderate–High</td>
+            <td>Lower</td>
+            <td>$3,800–$6,500</td>
+            <td>Moderate</td>
+            <td>Lower</td>
+            <td>Better cost structure; growing senior population</td>
+          </tr>
+          <tr>
+            <td><strong>Phoenix, AZ</strong></td>
+            <td>High</td>
+            <td>Moderate</td>
+            <td>$3,500–$6,000</td>
+            <td>Moderate</td>
+            <td>Different state rules</td>
+            <td>Lower real-estate cost; check AZ licensing</td>
+          </tr>
+          <tr>
+            <td><strong>Texas Metros</strong></td>
+            <td>High</td>
+            <td>Moderate</td>
+            <td>$3,200–$5,800</td>
+            <td>Lower–Moderate</td>
+            <td>Generally favorable</td>
+            <td>Attractive risk-adjusted returns</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SOBER LIVING -->
+    <h3><span class="segment-label">SEGMENT</span> Sober Living / Recovery Residence</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Demand</th>
+            <th>Competition</th>
+            <th>Typical Monthly Bed Rate</th>
+            <th>Startup / RE Burden</th>
+            <th>Zoning Friction</th>
+            <th>Notes</th>
           </tr>
         </thead>
         <tbody>
@@ -442,30 +533,34 @@
             <td>$800–$2,000+</td>
             <td>Very High</td>
             <td>High</td>
+            <td>Dense treatment pipeline; strict city permits & spacing common</td>
           </tr>
           <tr>
-            <td><strong>Los Angeles Co.</strong></td>
+            <td><strong>Los Angeles County</strong></td>
             <td>Very High</td>
             <td>High</td>
             <td>$800–$1,800+</td>
             <td>High</td>
-            <td>Mod–High</td>
+            <td>Moderate–High</td>
+            <td>Largest absolute market; neighborhood variation</td>
           </tr>
           <tr>
-            <td><strong>San Diego Co.</strong></td>
+            <td><strong>San Diego County</strong></td>
             <td>High</td>
-            <td>Mod–High</td>
+            <td>Moderate–High</td>
             <td>$800–$1,500</td>
             <td>High</td>
-            <td>Lower (≤6)</td>
+            <td>Lower (≤6 often easier)</td>
+            <td>Better zoning position than most OC cities</td>
           </tr>
           <tr>
             <td><strong>Inland Empire</strong></td>
-            <td>Mod–High</td>
+            <td>Moderate–High</td>
             <td>Lower</td>
-            <td>Lower</td>
+            <td>Lower than coastal</td>
             <td>Moderate</td>
             <td>Lower</td>
+            <td>Lower cost base; growing recovery need</td>
           </tr>
           <tr>
             <td><strong>Phoenix, AZ</strong></td>
@@ -473,33 +568,112 @@
             <td>Moderate</td>
             <td>$800–$1,200</td>
             <td>Moderate</td>
-            <td>Higher (state license)</td>
+            <td>Higher (state license required)</td>
+            <td>Mandatory ADHS license adds step</td>
           </tr>
           <tr>
             <td><strong>Texas Metros</strong></td>
             <td>High</td>
             <td>Moderate</td>
             <td>$600–$1,500</td>
-            <td>Lower–Mod</td>
-            <td>Favorable</td>
+            <td>Lower–Moderate</td>
+            <td>Generally favorable</td>
+            <td>Strong operating climate for new operators</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p><strong>Senior care note:</strong> Private-pay board-and-care often runs $4,000–$8,000+ per resident/month — much higher revenue per bed than sober living.</p>
+
+    <!-- IN-HOME CARE -->
+    <h3><span class="segment-label">SEGMENT</span> In-Home Care Agency</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Demand</th>
+            <th>Competition</th>
+            <th>Typical Hourly Rates</th>
+            <th>Startup Burden</th>
+            <th>Regulatory Notes</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Orange County</strong></td>
+            <td>Very High</td>
+            <td>High</td>
+            <td>$30–$45+/hr</td>
+            <td>Low–Moderate</td>
+            <td>HCO registration + business license</td>
+            <td>Affluent private-pay base; caregiver wages higher</td>
+          </tr>
+          <tr>
+            <td><strong>Los Angeles County</strong></td>
+            <td>Very High</td>
+            <td>High</td>
+            <td>$28–$42+/hr</td>
+            <td>Low–Moderate</td>
+            <td>HCO + local business license</td>
+            <td>Huge market; strong hospital referral potential</td>
+          </tr>
+          <tr>
+            <td><strong>San Diego County</strong></td>
+            <td>High</td>
+            <td>Moderate–High</td>
+            <td>$28–$40/hr</td>
+            <td>Low–Moderate</td>
+            <td>HCO + business license</td>
+            <td>Solid private-pay and referral environment</td>
+          </tr>
+          <tr>
+            <td><strong>Inland Empire</strong></td>
+            <td>Moderate–High</td>
+            <td>Moderate</td>
+            <td>$25–$35/hr</td>
+            <td>Lower</td>
+            <td>HCO + business license</td>
+            <td>Lower operating costs; growing demand</td>
+          </tr>
+          <tr>
+            <td><strong>Phoenix, AZ</strong></td>
+            <td>High</td>
+            <td>Moderate</td>
+            <td>$25–$35/hr</td>
+            <td>Lower</td>
+            <td>AZ state rules apply</td>
+            <td>Lower wage and overhead base</td>
+          </tr>
+          <tr>
+            <td><strong>Texas Metros</strong></td>
+            <td>High</td>
+            <td>Moderate</td>
+            <td>$22–$35/hr</td>
+            <td>Lower</td>
+            <td>State-specific home-care rules</td>
+            <td>Attractive for lean agency model</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight">
+      <strong>Key takeaway:</strong> Facility-based models (Senior Board & Care and Sober Living) are most sensitive to local zoning and real-estate costs. In-Home Care is far less location-constrained and usually the fastest to launch across all regions.
+    </div>
   </section>
 
   <!-- 4. ANALYSIS -->
   <section id="analysis">
     <h2>Overall Analysis</h2>
-    <p>California has strong demand from both aging demographics and the recovery pipeline, but also the highest real-estate costs and very uneven local zoning. The ≤6–7 resident size remains the practical sweet spot.</p>
+    <p>California has strong demand from both aging demographics and the recovery pipeline, but also the highest real-estate costs and very uneven local zoning. The ≤6–7 resident size remains the practical sweet spot for facility-based models.</p>
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
             <th>Factor</th>
-            <th>Senior Care</th>
+            <th>Senior Board & Care</th>
             <th>Sober Living</th>
             <th>In-Home Care</th>
           </tr>
@@ -518,7 +692,7 @@
             <td>Very Low</td>
           </tr>
           <tr>
-            <td>Revenue / Resident</td>
+            <td>Revenue / Client</td>
             <td>Highest</td>
             <td>Moderate</td>
             <td>Hourly / package</td>
@@ -533,7 +707,7 @@
       </table>
     </div>
 
-    <p>Orange County offers exceptional referral density but pairs it with elevated property costs and the strictest local rules. San Diego often provides a more workable zoning environment for small homes. In-home care avoids facility zoning entirely and can be the fastest path to revenue.</p>
+    <p>Orange County offers exceptional referral density for both senior care and recovery housing but pairs it with elevated property costs and the strictest local rules. San Diego often provides a more workable zoning environment for small homes. In-home care avoids facility zoning entirely and can be the fastest path to revenue in every region.</p>
   </section>
 
   <!-- 5. BUSINESS PLAN + BOTTOM LINE -->
