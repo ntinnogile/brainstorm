@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>California Residential Care & Recovery Housing Business Guide</title>
+<title>California Residential Care & Recovery Housing Business Guide (≤6–7 Residents)</title>
 <style>
   :root {
     --primary: #1a365d;
@@ -12,6 +12,7 @@
     --light: #f7fafc;
     --dark: #2d3748;
     --border: #e2e8f0;
+    --warning: #dd6b20;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -23,7 +24,7 @@
   header {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 1.5rem;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -38,69 +39,69 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
-  h1 { font-size: 1.5rem; font-weight: 700; }
-  nav { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  h1 { font-size: 1.35rem; font-weight: 700; }
+  nav { display: flex; gap: 0.4rem; flex-wrap: wrap; }
   nav a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.45rem 0.9rem;
     border-radius: 6px;
     font-weight: 500;
+    font-size: 0.95rem;
     transition: background 0.2s;
   }
-  nav a:hover, nav a.active { background: rgba(255,255,255,0.2); }
+  nav a:hover, nav a.active { background: rgba(255,255,255,0.22); }
   main {
     max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1.5rem 4rem;
+    margin: 1.75rem auto;
+    padding: 0 1.25rem 3rem;
   }
   section {
     display: none;
     background: white;
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.75rem;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   section.active { display: block; }
   h2 {
     color: var(--primary);
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
+    font-size: 1.65rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.4rem;
     border-bottom: 3px solid var(--accent);
   }
   h3 {
     color: var(--secondary);
-    margin: 1.5rem 0 0.75rem;
-    font-size: 1.3rem;
+    margin: 1.4rem 0 0.7rem;
+    font-size: 1.2rem;
   }
-  p { margin-bottom: 1rem; }
+  p { margin-bottom: 0.9rem; }
   .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin: 1.5rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin: 1.25rem 0;
   }
   .card {
     background: var(--light);
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 1.25rem;
     border-left: 5px solid var(--accent);
-    transition: transform 0.2s;
   }
-  .card:hover { transform: translateY(-3px); }
-  .card h3 { margin-top: 0; color: var(--primary); }
+  .card h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.5rem 0;
-    font-size: 0.95rem;
+    margin: 1.25rem 0;
+    font-size: 0.92rem;
   }
   th, td {
-    padding: 0.85rem 1rem;
+    padding: 0.7rem 0.85rem;
     text-align: left;
     border-bottom: 1px solid var(--border);
+    vertical-align: top;
   }
   th {
     background: var(--primary);
@@ -111,49 +112,63 @@
   tr:hover { background: #edf2f7; }
   .highlight {
     background: #ebf8ff;
-    padding: 1.25rem;
+    padding: 1.1rem;
     border-radius: 8px;
     border-left: 4px solid var(--secondary);
-    margin: 1.5rem 0;
+    margin: 1.25rem 0;
   }
   .bottom-line {
     background: linear-gradient(135deg, #f0fff4, #c6f6d5);
-    padding: 1.5rem;
+    padding: 1.4rem;
     border-radius: 10px;
     border: 2px solid var(--accent);
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   .bottom-line h3 { color: #276749; margin-top: 0; }
-  ul { margin: 0.75rem 0 1rem 1.5rem; }
-  li { margin-bottom: 0.4rem; }
-  .badge {
-    display: inline-block;
-    background: var(--accent);
-    color: white;
-    font-size: 0.75rem;
-    padding: 0.2rem 0.6rem;
-    border-radius: 20px;
-    margin-left: 0.5rem;
+  ul { margin: 0.6rem 0 0.9rem 1.4rem; }
+  li { margin-bottom: 0.35rem; }
+  .tabs {
+    display: flex;
+    gap: 0.4rem;
+    margin: 1rem 0 0.75rem;
+    flex-wrap: wrap;
   }
+  .tab-btn {
+    padding: 0.45rem 1rem;
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .tab-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .rank-easy { color: #276749; font-weight: 600; }
+  .rank-hard { color: #c53030; font-weight: 600; }
   footer {
     text-align: center;
-    padding: 2rem;
+    padding: 1.75rem;
     color: #718096;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
   @media (max-width: 700px) {
-    h1 { font-size: 1.2rem; }
-    nav a { padding: 0.4rem 0.7rem; font-size: 0.9rem; }
-    section { padding: 1.25rem; }
-    table { font-size: 0.85rem; }
-    th, td { padding: 0.6rem; }
+    h1 { font-size: 1.15rem; }
+    nav a { padding: 0.35rem 0.65rem; font-size: 0.85rem; }
+    section { padding: 1.1rem; }
+    table { font-size: 0.82rem; }
+    th, td { padding: 0.5rem; }
   }
 </style>
 </head>
 <body>
 <header>
   <div class="header-content">
-    <h1>CA Residential Care & Recovery Guide</h1>
+    <h1>CA Care & Recovery Guide • Sweet Spot ≤6–7 Residents</h1>
     <nav>
       <a href="#ideas" class="nav-link active" onclick="showSection('ideas')">Business Models</a>
       <a href="#licensing" class="nav-link" onclick="showSection('licensing')">Licensing & Zoning</a>
@@ -167,100 +182,176 @@
 <main>
   <!-- 1. BUSINESS MODELS -->
   <section id="ideas" class="active">
-    <h2>Business Models Overview</h2>
-    <p>Four proven residential and care models suitable for California entrepreneurs. Each can be launched at small scale (typically 6 or fewer residents for easiest zoning) and scaled later.</p>
-    
+    <h2>Business Models (Baseline: ≤6–7 Residents)</h2>
+    <p>Four models that work at manageable small scale. Keeping capacity at 6 or fewer residents maximizes zoning protections, simplifies staffing, and reduces fire/life-safety complexity across California.</p>
+
     <div class="card-grid">
       <div class="card">
         <h3>Senior Living / Board & Care (RCFE)</h3>
-        <p>Small residential care homes for seniors (usually age 60+) who need help with activities of daily living (bathing, dressing, medication reminders, meals) but do not require skilled nursing. These homes feel like a private residence rather than an institution. Ideal for owner-operators who want long-term residents and private-pay revenue.</p>
-        <p><strong>Typical size:</strong> 6 beds (sweet spot for zoning)</p>
+        <p>Residential care for seniors (typically 60+) needing help with ADLs, medication reminders, meals, and supervision in a home-like setting. Long average stays and strong private-pay potential.</p>
       </div>
-      
       <div class="card">
         <h3>In-Home Care Agency</h3>
-        <p>Non-medical personal care and companionship services delivered in the client’s own home. Services include help with ADLs, light housekeeping, meal prep, transportation, and respite for family caregivers. Lower real-estate risk (no facility) and faster startup, but requires building a caregiver workforce and continuous client acquisition.</p>
-        <p><strong>Typical model:</strong> Agency employing or contracting caregivers</p>
+        <p>Non-medical personal care and companionship delivered in the client’s own home. No facility to license or zone. Faster launch, continuous sales and caregiver management required.</p>
       </div>
-      
       <div class="card">
-        <h3>Boarding House / Residential Boarding</h3>
-        <p>Shared residential housing providing room and board, often with light supervision. Can serve working adults, transitional populations, or specialized groups. Less regulated than licensed care homes when no personal care is provided, but local boarding-house or rooming-house rules frequently apply. Lower care intensity than senior or recovery models.</p>
-        <p><strong>Typical size:</strong> 4–12 residents depending on local codes</p>
+        <h3>Boarding House</h3>
+        <p>Shared residential housing with room and board. Minimal care/supervision. Lower intensity than licensed care or recovery models, but subject to local boarding/rooming-house rules.</p>
       </div>
-      
       <div class="card">
         <h3>Sober Living / Recovery Residence</h3>
-        <p>Peer-supported, alcohol- and drug-free housing for people in recovery. Residents follow house rules, attend meetings, and receive accountability from a house manager or peers. No clinical treatment is provided on-site (that would trigger different licensing). Strong referral pipelines from treatment centers, courts, and county programs.</p>
-        <p><strong>Typical size:</strong> 6–14 beds; 6 or fewer often easiest for zoning</p>
+        <p>Peer-supported, substance-free housing for people in recovery. House rules, accountability, and structure. No clinical treatment on-site (that triggers different licensing).</p>
       </div>
     </div>
+
+    <h3>Quick Model Comparison (≤6–7 Residents)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Core Offering</th>
+          <th>Typical Revenue Driver</th>
+          <th>Average Stay</th>
+          <th>Owner Involvement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Senior Board & Care</strong></td>
+          <td>Personal care + housing</td>
+          <td>Private-pay monthly fee</td>
+          <td>Long (months–years)</td>
+          <td>High (care oversight)</td>
+        </tr>
+        <tr>
+          <td><strong>In-Home Care</strong></td>
+          <td>Hourly / package care in client home</td>
+          <td>Billable hours</td>
+          <td>Ongoing / variable</td>
+          <td>High (sales + staffing)</td>
+        </tr>
+        <tr>
+          <td><strong>Boarding House</strong></td>
+          <td>Room + board</td>
+          <td>Rent / board fees</td>
+          <td>Variable</td>
+          <td>Low–Moderate</td>
+        </tr>
+        <tr>
+          <td><strong>Sober Living</strong></td>
+          <td>Recovery housing + peer support</td>
+          <td>Program / rent fees</td>
+          <td>Medium (3–9 months typical)</td>
+          <td>Moderate (house management)</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <!-- 2. LICENSING & ZONING -->
   <section id="licensing">
-    <h2>Licensing & Zoning Requirements</h2>
-    <p>California has no single statewide “sober living” license for pure housing models. Senior care is tightly regulated. Local cities add significant variation—especially in Orange County.</p>
+    <h2>Licensing, Governing Bodies & Staffing (≤6–7 Residents)</h2>
 
-    <h3>1. Senior Living / RCFE (Residential Care Facility for the Elderly)</h3>
-    <ul>
-      <li><strong>State:</strong> California Department of Social Services (CDSS) – Community Care Licensing. Administrator certification (80-hour course + exam), Live Scan, fire clearance, plan of operation required.</li>
-      <li><strong>Los Angeles County / City:</strong> Standard CDSS process. City of LA treats small RCFEs favorably under residential use rules for ≤6.</li>
-      <li><strong>Orange County:</strong> Same state license. Many cities (Costa Mesa, Santa Ana, etc.) layer additional local scrutiny or spacing if the home is perceived as a group home. Confirm city-specific rules early.</li>
-      <li><strong>San Diego County / City:</strong> Standard CDSS. City of San Diego generally allows ≤6 as residential use with fewer extra local barriers than coastal OC cities.</li>
-    </ul>
+    <h3>Master Comparison Table</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Primary License / Credential</th>
+          <th>Governing Body</th>
+          <th>Typical Staffing (≤6–7)</th>
+          <th>Key Local Notes (LA / OC / SD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Senior Board & Care</strong></td>
+          <td>Residential Care Facility for the Elderly (RCFE)</td>
+          <td>CA Dept. of Social Services (CDSS) – Community Care Licensing Division</td>
+          <td>Certified Administrator (can be owner) + 1–2 caregivers (day); overnight coverage required. Exact ratios depend on resident needs.</td>
+          <td>LA: Standard CDSS. OC: City permits/spacing may apply. SD: Generally smoother for ≤6.</td>
+        </tr>
+        <tr>
+          <td><strong>In-Home Care</strong></td>
+          <td>Home Care Organization (HCO) registration (if employing caregivers)</td>
+          <td>CDSS (Home Care Services Bureau)</td>
+          <td>No facility staff. Caregivers scheduled per client; background checks mandatory.</td>
+          <td>Business license required in all three counties. Minimal zoning impact.</td>
+        </tr>
+        <tr>
+          <td><strong>Boarding House</strong></td>
+          <td>Usually none at state level (if no personal care)</td>
+          <td>Local city/county planning & business licensing</td>
+          <td>Minimal – owner or part-time manager common.</td>
+          <td>LA, OC, SD each define “boarding/rooming house” and unrelated-adult limits differently. Written zoning determination essential.</td>
+        </tr>
+        <tr>
+          <td><strong>Sober Living (non-clinical)</strong></td>
+          <td>No state facility license if pure housing + peer support. Voluntary: CCAPP or NARR-aligned certification. OC often uses Sheriff certification for county referrals.</td>
+          <td>DHCS (only if treatment services added). Local cities + Orange County Sheriff for some funded beds.</td>
+          <td>House Manager (often live-in) ± part-time support. Peer accountability model.</td>
+          <td><strong>OC:</strong> Highest friction – Group/Special Use Permits + 650–1,000 ft spacing common. <strong>LA:</strong> Currently lighter. <strong>SD:</strong> ≤6 often by-right in residential zones.</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <h3>2. In-Home Care Agency</h3>
-    <ul>
-      <li><strong>State:</strong> If non-medical only → often Home Care Organization (HCO) registration with CDSS. Background checks for caregivers required. No facility license needed.</li>
-      <li><strong>Counties:</strong> Local business licenses and possible home-care specific ordinances. LA, Orange, and San Diego all require standard business registration; caregiver fingerprinting is statewide.</li>
-    </ul>
-
-    <h3>3. Boarding House</h3>
-    <ul>
-      <li><strong>State:</strong> Generally no state care license if no personal care or supervision is provided.</li>
-      <li><strong>Local:</strong> Many cities regulate boarding/rooming houses via zoning, occupancy limits, and business licenses. LA, OC cities, and San Diego each have distinct definitions of “family,” “boarding house,” and unrelated adult limits. Always obtain written zoning determination.</li>
-    </ul>
-
-    <h3>4. Sober Living / Recovery Residence (Non-Clinical)</h3>
-    <ul>
-      <li><strong>State:</strong> No DHCS license required if only housing + peer support is offered. Adding counseling, groups, or treatment planning triggers residential SUD licensure.</li>
-      <li><strong>Los Angeles:</strong> City currently has no dedicated sober-living ordinance (as of late 2026). Unrelated adults sharing a household are generally treated as residential use. County controls some funded recovery housing.</li>
-      <li><strong>Orange County:</strong> Highest local friction. Many cities require Group Home / Special Use Permits, operator permits, good-neighbor policies, and separation distances (commonly 650 ft or 1,000 ft from other sober living or licensed treatment). Costa Mesa, Santa Ana, and others are particularly active. County also has rules in unincorporated areas.</li>
-      <li><strong>San Diego:</strong> Generally more favorable. Homes of six or fewer residents are often permitted by right in residential zones. No county-wide spacing ordinance equivalent to OC’s strictest cities.</li>
-    </ul>
+    <h3>Channels to Obtain Residents</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Primary Resident / Client Channels</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Senior Board & Care</strong></td>
+          <td>Hospital & SNF discharge planners • Geriatricians / primary-care physicians • Home-health agencies • Placement agencies (A Place for Mom, Caring.com, local) • Adult Protective Services • Senior centers • Word-of-mouth / alumni families</td>
+        </tr>
+        <tr>
+          <td><strong>In-Home Care</strong></td>
+          <td>Hospital discharge planners • Physicians • Senior centers • Family caregivers • Online search / Google Business Profile • Partnerships with hospice or home-health</td>
+        </tr>
+        <tr>
+          <td><strong>Boarding House</strong></td>
+          <td>Online listings • Local employers • General advertising • Word-of-mouth • Social-service referrals (limited)</td>
+        </tr>
+        <tr>
+          <td><strong>Sober Living</strong></td>
+          <td>Residential treatment / detox discharge planners • IOP/PHP programs • Drug courts & probation • County Health Care Agency / recovery-residence contracts • Hospitals • Therapists • Recovery community & alumni • Certified directories</td>
+        </tr>
+      </tbody>
+    </table>
 
     <div class="highlight">
-      <strong>Practical Rule:</strong> For any model, secure written zoning confirmation and (where required) fire clearance <em>before</em> signing a long-term lease or purchase. Capacity of 6 or fewer almost always provides the strongest legal and zoning position in California.
+      <strong>Sweet-spot rule:</strong> Stay at 6 or fewer residents whenever possible. This maximizes residential-use protections under California law, simplifies fire clearance, and keeps staffing ratios manageable for an owner-operator.
     </div>
   </section>
 
-  <!-- 3. COMPARISON -->
+  <!-- 3. MARKET COMPARISON -->
   <section id="comparison">
-    <h2>Market Comparison</h2>
-    <p>Side-by-side view of demand, costs, and operating climate for key California markets and selected alternatives (focused on sober living where data is richest; senior care follows similar geographic cost patterns).</p>
-
+    <h2>Market Comparison (Focus on Southern California + Alternatives)</h2>
     <table>
       <thead>
         <tr>
           <th>Market</th>
           <th>Demand</th>
           <th>Competition</th>
-          <th>Typical Bed Rate (Monthly)</th>
-          <th>Startup / RE Burden</th>
+          <th>Typical Monthly Rate (Sober Living Bed)</th>
+          <th>Startup / Real-Estate Burden</th>
           <th>Zoning Friction</th>
-          <th>Notes</th>
+          <th>Best Suited For</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Orange County, CA</strong></td>
+          <td><strong>Orange County</strong></td>
           <td>Very High</td>
           <td>Very High</td>
           <td>$800–$2,000+</td>
           <td>Very High</td>
           <td>High</td>
-          <td>Dense treatment bed supply; strict city ordinances common</td>
+          <td>Experienced operators with referral networks</td>
         </tr>
         <tr>
           <td><strong>Los Angeles County</strong></td>
@@ -269,7 +360,7 @@
           <td>$800–$1,800+</td>
           <td>High</td>
           <td>Moderate–High</td>
-          <td>Largest absolute scale; neighborhood variation</td>
+          <td>Scale seekers; varied neighborhoods</td>
         </tr>
         <tr>
           <td><strong>San Diego County</strong></td>
@@ -277,8 +368,8 @@
           <td>Moderate–High</td>
           <td>$800–$1,500</td>
           <td>High</td>
-          <td>Lower</td>
-          <td>Better zoning for ≤6 than most OC cities</td>
+          <td>Lower (esp. ≤6)</td>
+          <td>Balanced CA entry</td>
         </tr>
         <tr>
           <td><strong>Riverside / Inland Empire</strong></td>
@@ -287,7 +378,7 @@
           <td>Lower than coastal</td>
           <td>Moderate</td>
           <td>Lower</td>
-          <td>Better cost structure within California</td>
+          <td>Cost-conscious CA operators</td>
         </tr>
         <tr>
           <td><strong>Phoenix, AZ</strong></td>
@@ -295,8 +386,8 @@
           <td>Moderate</td>
           <td>~$800–$1,200</td>
           <td>Moderate</td>
-          <td>Higher (state license)</td>
-          <td>Mandatory ADHS license</td>
+          <td>Higher (state license required)</td>
+          <td>Lower capital, willing to license</td>
         </tr>
         <tr>
           <td><strong>Texas Metros</strong></td>
@@ -305,137 +396,222 @@
           <td>$600–$1,500</td>
           <td>Lower–Moderate</td>
           <td>Generally favorable</td>
-          <td>Strong risk-adjusted returns</td>
-        </tr>
-        <tr>
-          <td><strong>South Florida</strong></td>
-          <td>Very High</td>
-          <td>Extremely High</td>
-          <td>$800–$1,500+</td>
-          <td>Moderate</td>
-          <td>Moderate</td>
-          <td>FARR certification important</td>
+          <td>Best risk-adjusted returns for many</td>
         </tr>
       </tbody>
     </table>
 
-    <h3>Additional Context</h3>
-    <ul>
-      <li><strong>California statewide modeled bed rate:</strong> ~$1,040 / month (highest in U.S. models).</li>
-      <li><strong>Lease vs Buy:</strong> In high-cost coastal CA, leasing almost always produces better early cash flow than purchasing at median prices.</li>
-      <li><strong>Senior care rates:</strong> Private-pay board-and-care commonly $4,000–$8,000+ per resident per month—significantly higher revenue per bed than sober living, with longer average stays.</li>
-      <li><strong>In-home care:</strong> Revenue is hourly or package-based rather than bed-based; lower fixed real-estate cost but higher marketing and staffing intensity.</li>
-    </ul>
+    <p><strong>Senior Board & Care context:</strong> Private-pay rates commonly $4,000–$8,000+ per resident per month — substantially higher revenue per bed than sober living, with longer stays. In-home care is hourly/package-based and avoids facility real-estate cost entirely.</p>
   </section>
 
   <!-- 4. ANALYSIS -->
   <section id="analysis">
     <h2>Overall Analysis</h2>
-    <p>California offers some of the strongest demographic and referral tailwinds in the nation for both senior residential care and recovery housing. The 60+ population continues to grow, private-pay capacity remains robust in coastal and many inland markets, and the treatment-to-housing pipeline for recovery is large—especially in Southern California.</p>
+    <p>California combines strong demographic tailwinds (aging population + large treatment-to-housing pipeline) with the highest real-estate costs and some of the most variable local zoning in the country. The ≤6–7 resident baseline remains the practical sweet spot for both senior board-and-care and sober living because it aligns with residential-use protections, simpler fire/life-safety rules, and owner-operator staffing models.</p>
 
-    <p>The decisive variables are not demand; they are <strong>local zoning friction</strong> and <strong>real-estate cost</strong>. Orange County delivers exceptional referral density but pairs it with some of the strictest municipal sober-living and group-home rules in the state and very high property prices. San Diego and parts of the Inland Empire often provide a more favorable balance of demand and regulatory ease. Los Angeles offers unmatched scale with greater neighborhood-by-neighborhood variation.</p>
-
-    <p>Non-clinical sober living is lighter to enter than licensed RCFE senior care (no state facility license if pure housing + peer support), yet local permits and neighborhood dynamics can still create meaningful barriers. In-home care avoids facility zoning entirely and can be launched with lower capital, but it trades real-estate risk for continuous sales and caregiver-management intensity.</p>
-
-    <p>Small scale (≤6 residents) remains the regulatory and operational sweet spot across senior board-and-care and sober living. It maximizes zoning protections, simplifies staffing, and keeps fire/life-safety requirements manageable.</p>
-
-    <div class="highlight">
-      Operators who succeed treat these businesses as relationship- and compliance-driven rather than pure real-estate plays. Referral networks (hospitals, treatment centers, courts, geriatric professionals) and clean local permitting are more predictive of success than simply securing a large house.
-    </div>
-  </section>
-
-  <!-- 5. BUSINESS PLAN -->
-  <section id="plan">
-    <h2>Basic Business Plan Footprint</h2>
-    <p>A practical skeleton that works for senior board-and-care, sober living, boarding, or in-home care. Customize the details to the chosen model.</p>
-
-    <h3>Core Sections</h3>
-    <ol>
-      <li><strong>Executive Summary</strong> – Model chosen, target capacity, location, ownership structure, funding ask (if any).</li>
-      <li><strong>Company Description</strong> – Mission, legal entity (usually LLC), location rationale.</li>
-      <li><strong>Market Analysis</strong> – Local demand drivers, competitor map, pricing, referral sources.</li>
-      <li><strong>Services & Operations</strong> – Daily programming or care model, house rules / care plans, staffing ratios, quality metrics.</li>
-      <li><strong>Marketing & Sales</strong> – Referral partner strategy (primary), digital presence, directories, community outreach.</li>
-      <li><strong>Regulatory & Compliance</strong> – Exact licenses, certifications, zoning path, insurance, policies.</li>
-      <li><strong>Management Team</strong> – Owner/operator roles, key hires (administrator, house manager, caregivers).</li>
-      <li><strong>Financial Plan</strong> – Startup costs, monthly operating budget, occupancy ramp, 3-year projections, break-even.</li>
-      <li><strong>Risks & Mitigation</strong> – Occupancy, regulatory change, staffing, liability.</li>
-    </ol>
-
-    <h3>Segment Intricacies Comparison</h3>
     <table>
       <thead>
         <tr>
-          <th>Aspect</th>
+          <th>Factor</th>
           <th>Senior Board & Care</th>
+          <th>Sober Living</th>
           <th>In-Home Care</th>
           <th>Boarding House</th>
-          <th>Sober Living</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Primary License</td>
-          <td>CDSS RCFE</td>
-          <td>HCO registration (if applicable)</td>
-          <td>Usually none (state)</td>
-          <td>None if non-clinical</td>
-        </tr>
-        <tr>
-          <td>Zoning Sensitivity</td>
-          <td>Moderate (≤6 protected)</td>
+          <td>State Licensing Burden</td>
+          <td>High (full RCFE)</td>
+          <td>Low (none if non-clinical)</td>
+          <td>Low–Moderate (HCO)</td>
           <td>Very Low</td>
-          <td>High (local rules)</td>
-          <td>High in OC; lower elsewhere</td>
         </tr>
         <tr>
-          <td>Revenue per Unit</td>
-          <td>Highest ($4k–$8k+/mo)</td>
-          <td>Hourly / package</td>
+          <td>Local Zoning Risk</td>
           <td>Moderate</td>
-          <td>Moderate ($800–$2k)</td>
+          <td>High in OC; lower in SD</td>
+          <td>Very Low</td>
+          <td>High (local definitions)</td>
         </tr>
         <tr>
-          <td>Average Stay</td>
-          <td>Long (months–years)</td>
-          <td>Variable / ongoing</td>
-          <td>Variable</td>
-          <td>Medium (3–9 months typical)</td>
+          <td>Revenue per Resident</td>
+          <td>Highest</td>
+          <td>Moderate</td>
+          <td>Variable (hourly)</td>
+          <td>Moderate</td>
         </tr>
         <tr>
-          <td>Staffing Intensity</td>
-          <td>High (personal care)</td>
-          <td>High (scheduling)</td>
-          <td>Low–Moderate</td>
-          <td>Moderate (house manager)</td>
+          <td>Referral Dependence</td>
+          <td>High</td>
+          <td>Very High</td>
+          <td>High</td>
+          <td>Lower</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Orange County offers exceptional referral density for both senior care and recovery housing but pairs it with elevated property costs and the strictest municipal group-home/sober-living rules. San Diego frequently provides a more workable zoning environment for small homes. In-home care sidesteps facility zoning altogether and can be the fastest to revenue, at the cost of ongoing sales and workforce intensity.</p>
+  </section>
+
+  <!-- 5. BUSINESS PLAN + BOTTOM LINE -->
+  <section id="plan">
+    <h2>Business Plan Footprint & Bottom Line</h2>
+
+    <h3>Universal Plan Skeleton (Any Model)</h3>
+    <ol>
+      <li>Executive Summary</li>
+      <li>Company Description & Entity (usually LLC)</li>
+      <li>Market Analysis & Referral Map</li>
+      <li>Services / House Rules / Care Model</li>
+      <li>Operations & Staffing Plan (≤6–7 baseline)</li>
+      <li>Marketing & Resident Acquisition Channels</li>
+      <li>Regulatory Path (license, zoning, certifications)</li>
+      <li>Financials (startup, ramp, 3-year projections)</li>
+      <li>Risks & Mitigation</li>
+    </ol>
+
+    <h3>Staffing Snapshot at ≤6–7 Residents</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Core Staff</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Senior Board & Care</td>
+          <td>Administrator + 1–2 caregivers; overnight coverage</td>
+          <td>Administrator may be owner. Ratios driven by resident acuity.</td>
         </tr>
         <tr>
-          <td>Key Referral Sources</td>
-          <td>Hospitals, doctors, placement agencies</td>
-          <td>Hospitals, families, senior centers</td>
-          <td>General / online</td>
-          <td>Treatment centers, courts, county</td>
+          <td>Sober Living</td>
+          <td>House Manager (often live-in) ± part-time help</td>
+          <td>Peer accountability model reduces clinical staffing need.</td>
         </tr>
         <tr>
-          <td>Primary Risk</td>
-          <td>Care liability, occupancy</td>
-          <td>Caregiver turnover, sales</td>
-          <td>Local enforcement</td>
-          <td>Zoning + vacancy + reputation</td>
+          <td>In-Home Care</td>
+          <td>Scheduler / coordinator + pool of caregivers</td>
+          <td>No residential staff; caregivers work in client homes.</td>
+        </tr>
+        <tr>
+          <td>Boarding House</td>
+          <td>Owner or part-time manager</td>
+          <td>Lowest ongoing labor.</td>
         </tr>
       </tbody>
     </table>
 
     <div class="bottom-line">
-      <h3>Bottom Line</h3>
-      <p>All four models can work in California, but they reward different operator strengths. <strong>Senior board-and-care</strong> offers the highest revenue per resident and longest stays when private-pay occupancy is strong, at the cost of fuller licensing and hands-on care. <strong>Sober living</strong> is lighter on state licensing and can generate solid margins with strong treatment-center relationships, yet local zoning (especially in Orange County) and competition are real hurdles. <strong>In-home care</strong> minimizes real-estate risk and can launch fastest, but success hinges on sales and workforce systems. <strong>Boarding houses</strong> sit in between and require careful local zoning navigation.</p>
-      <p><strong>Recommended starting posture for most new operators:</strong> Choose the model that matches your experience and capital, target capacity of 6 or fewer, prioritize a lease with strong contingencies, obtain written zoning and fire feedback before committing, and begin building referral relationships the day you start serious planning. The operators who win treat compliance and relationships as core competencies, not afterthoughts.</p>
+      <h3>Bottom Line — Ranked from Easiest to Hardest</h3>
+      <p>Rankings below assume a first-time or small operator targeting ≤6–7 residents in Southern California. Priorities compete: the “easiest” model on capital is not always easiest on time or regulation.</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('overall')">Overall Ease</button>
+        <button class="tab-btn" onclick="showTab('time')">By Time to Launch</button>
+        <button class="tab-btn" onclick="showTab('capital')">By Capital Required</button>
+        <button class="tab-btn" onclick="showTab('regulation')">By Regulatory Burden</button>
+      </div>
+
+      <div id="overall" class="tab-content active">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Model</th>
+              <th>Time</th>
+              <th>Effort</th>
+              <th>Regulation</th>
+              <th>Capital</th>
+              <th>Summary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rank-easy">1 (Easiest)</td>
+              <td><strong>In-Home Care</strong></td>
+              <td>Fast</td>
+              <td>High ongoing</td>
+              <td>Low–Mod</td>
+              <td>Lowest</td>
+              <td>No facility. Fastest path to first revenue.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong>Boarding House</strong></td>
+              <td>Moderate</td>
+              <td>Low–Mod</td>
+              <td>Local rules</td>
+              <td>Low–Mod</td>
+              <td>Simple operations; zoning is the main variable.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><strong>Sober Living</strong></td>
+              <td>Moderate</td>
+              <td>Moderate</td>
+              <td>Low state / High local (esp. OC)</td>
+              <td>Moderate</td>
+              <td>No state license if non-clinical; referral & zoning heavy.</td>
+            </tr>
+            <tr>
+              <td class="rank-hard">4 (Hardest)</td>
+              <td><strong>Senior Board & Care</strong></td>
+              <td>Longest</td>
+              <td>High</td>
+              <td>Highest</td>
+              <td>Moderate–High</td>
+              <td>Full RCFE licensing + care responsibility. Highest revenue potential.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="time" class="tab-content">
+        <table>
+          <thead><tr><th>Rank</th><th>Model</th><th>Typical Time to First Resident</th><th>Key Delay Drivers</th></tr></thead>
+          <tbody>
+            <tr><td class="rank-easy">1</td><td>In-Home Care</td><td>4–12 weeks</td><td>HCO registration, caregiver recruiting, first clients</td></tr>
+            <tr><td>2</td><td>Boarding House</td><td>6–14 weeks</td><td>Zoning confirmation, setup</td></tr>
+            <tr><td>3</td><td>Sober Living</td><td>8–20 weeks</td><td>Property + local permits (OC slower) + referral pipeline</td></tr>
+            <tr><td class="rank-hard">4</td><td>Senior Board & Care</td><td>4–9+ months</td><td>Administrator cert, CDSS application, fire clearance, inspection</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="capital" class="tab-content">
+        <table>
+          <thead><tr><th>Rank</th><th>Model</th><th>Relative Capital</th><th>Main Cost Drivers</th></tr></thead>
+          <tbody>
+            <tr><td class="rank-easy">1</td><td>In-Home Care</td><td>Lowest</td><td>Working capital, marketing, initial caregiver payroll</td></tr>
+            <tr><td>2</td><td>Boarding House</td><td>Low–Moderate</td><td>Deposits, light furnishing, reserves</td></tr>
+            <tr><td>3</td><td>Sober Living</td><td>Moderate</td><td>Lease deposits, furnishing, reserves, possible permit costs</td></tr>
+            <tr><td class="rank-hard">4</td><td>Senior Board & Care</td><td>Moderate–High</td><td>Same as sober living + licensing costs, higher insurance, care equipment</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="regulation" class="tab-content">
+        <table>
+          <thead><tr><th>Rank</th><th>Model</th><th>Regulatory Load</th><th>Primary Bodies & Hurdles</th></tr></thead>
+          <tbody>
+            <tr><td class="rank-easy">1</td><td>Boarding House</td><td>Lowest state</td><td>Local zoning & business license only (if no care)</td></tr>
+            <tr><td>2</td><td>In-Home Care</td><td>Low–Moderate</td><td>CDSS HCO + background checks</td></tr>
+            <tr><td>3</td><td>Sober Living</td><td>Low state / High local</td><td>No DHCS license if non-clinical; OC cities + possible Sheriff cert</td></tr>
+            <tr><td class="rank-hard">4</td><td>Senior Board & Care</td><td>Highest</td><td>Full CDSS RCFE license, Administrator certification, ongoing surveys</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top:1.25rem;"><strong>Final guidance:</strong> Match the model to your capital, timeline tolerance, and willingness to manage care versus housing. For most first-time operators seeking a facility-based business in California, non-clinical sober living at ≤6 residents or in-home care represent the more accessible on-ramps. Senior board-and-care rewards those prepared for full licensing with higher per-resident revenue and longer stays. In all cases, written zoning confirmation and early referral-network building are non-negotiable.</p>
     </div>
   </section>
 </main>
 
 <footer>
-  <p>Informational guide only • Verify all licensing, zoning, and financial assumptions with qualified local professionals • Data current as of 2026 research</p>
+  <p>Informational only • Verify all licenses, zoning, staffing ratios, and financials with qualified local professionals and the relevant governing bodies (CDSS, DHCS, city planning, fire) • Baseline assumes ≤6–7 residents • Data reflects 2025–2026 research</p>
 </footer>
 
 <script>
@@ -445,6 +621,13 @@
     document.getElementById(id).classList.add('active');
     document.querySelector(`a[href="#${id}"]`).classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showTab(id) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
   }
 </script>
 </body>
