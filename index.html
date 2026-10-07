@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
 
-<title>CA Care & Recovery Guide • ≤6–7 Residents</title>
+<title>Care & Recovery Business Models, an analysis • ≤6–7 Residents</title>
 
 <style>
   :root {
@@ -270,6 +270,35 @@
     margin-top: 8px;
   }
 
+  .action-card {
+    background: var(--light);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 14px;
+    border-left: 5px solid var(--accent);
+  }
+  .action-card h4 {
+    color: var(--primary);
+    margin: 0 0 8px 0;
+    font-size: 1.05rem;
+  }
+  .action-card .why {
+    font-size: 0.93rem;
+    margin-bottom: 8px;
+  }
+  .action-card .learn {
+    font-size: 0.92rem;
+    margin-bottom: 6px;
+  }
+  .action-card .contact {
+    font-size: 0.9rem;
+    color: #2d3748;
+    background: #edf2f7;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+
   footer {
     text-align: center;
     padding: 20px 16px calc(20px + var(--safe-bottom));
@@ -301,6 +330,7 @@
       <a href="#analysis" class="nav-link" onclick="showSection('analysis')">Analysis</a>
       <a href="#plan" class="nav-link" onclick="showSection('plan')">Plan</a>
       <a href="#cashflow" class="nav-link" onclick="showSection('cashflow')">Sample cash flow</a>
+      <a href="#action" class="nav-link" onclick="showSection('action')">Plan of Action</a>
     </nav>
   </div>
 </header>
@@ -871,7 +901,7 @@
     </div>
   </section>
 
-  <!-- 6. SAMPLE CASH FLOW (NEW) -->
+  <!-- 6. SAMPLE CASH FLOW -->
   <section id="cashflow">
     <h2>Sober Living, lease path sample cash flow</h2>
     <p>Illustrative figures for a <strong>6-bed non-clinical recovery residence</strong> on a lease path. All numbers are realistic 2025–2026 ranges for planning purposes only. Actual results will vary by property, rates, and execution.</p>
@@ -1123,6 +1153,70 @@
     <div class="highlight">
       <strong>Planning takeaway:</strong> Budget $50k–$65k total liquid capital for a Wake County 6-bed leased home (startup + first-year cash-flow buffer). San Diego requires meaningfully more capital and has a steeper early burn rate despite higher per-bed revenue.
     </div>
+  </section>
+
+  <!-- 7. PLAN OF ACTION (NEW) -->
+  <section id="action">
+    <h2>Plan of Action — Raleigh / Wake County Market Research</h2>
+    <p>If you are targeting sober living in the Raleigh area, start with these three organizations. They give the highest-signal insights on demand, referral standards, and real-world supply gaps.</p>
+
+    <div class="action-card">
+      <h4>1. Wake County Recovery Court</h4>
+      <p class="why"><strong>Why contact them first:</strong> Participants can be court-ordered into a sober living environment. This is one of the most direct and structured sources of demand in the county.</p>
+      <p class="learn"><strong>What you can learn:</strong></p>
+      <ul>
+        <li>Monthly / quarterly placement volume into sober living</li>
+        <li>Preferred house characteristics (size, rules, manager model, MAT-friendly status)</li>
+        <li>What makes them recommend one residence over another</li>
+        <li>Current gaps in local supply</li>
+      </ul>
+      <div class="contact">
+        <strong>Location:</strong> Wake County Courthouse, 4th Floor, Suite 412<br>
+        316 Fayetteville St, Raleigh, NC 27601
+      </div>
+    </div>
+
+    <div class="action-card">
+      <h4>2. SouthLight Healthcare (Raleigh Hub)</h4>
+      <p class="why"><strong>Why contact them:</strong> Major local treatment provider (outpatient, MAT/opioid treatment, intensive outpatient). They are also the substance-use treatment provider for Wake County Recovery Court, so they sit at the intersection of clinical care and court-involved clients who need step-down housing.</p>
+      <p class="learn"><strong>What you can learn:</strong></p>
+      <ul>
+        <li>Volume of clients discharging who need sober living</li>
+        <li>Typical client profiles and length-of-stay preferences</li>
+        <li>What referral partners actually look for in a recovery residence</li>
+        <li>Pain points with existing local housing options</li>
+      </ul>
+      <div class="contact">
+        <strong>Location:</strong> 2101 Garner Rd, Raleigh, NC 27610<br>
+        <strong>Phone:</strong> 919-787-6131
+      </div>
+    </div>
+
+    <div class="action-card">
+      <h4>3. Emmaus House of Raleigh <span style="font-weight:500;">(or Fellowship Home of Raleigh)</span></h4>
+      <p class="why"><strong>Why contact them:</strong> Established, operating recovery residences in Raleigh. Both appear as named partners in Wake County’s opioid-settlement Recovery Housing Support funding. Talking to an actual operator gives ground-level reality on occupancy, rates, resident mix, competition (including Oxford Houses), and day-to-day challenges.</p>
+      <p class="learn"><strong>What you can learn:</strong></p>
+      <ul>
+        <li>Real occupancy patterns and pricing</li>
+        <li>Resident profiles and common challenges</li>
+        <li>How they interact with courts and treatment providers</li>
+        <li>Where the biggest local gaps currently sit</li>
+      </ul>
+      <div class="contact">
+        <strong>Emmaus House starting point:</strong> 10 N. East Street, Raleigh, NC 27601<br>
+        <strong>Phone:</strong> 919-327-2229<br>
+        <em>Alternative: Fellowship Home of Raleigh (Men’s: 919-833-6030)</em>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <strong>Suggested sequence:</strong><br>
+      1. Wake County Recovery Court (demand + standards)<br>
+      2. SouthLight Healthcare (treatment discharge pipeline)<br>
+      3. Emmaus House or Fellowship Home (real-world supply & operations)
+    </div>
+
+    <p class="note">Secondary options if needed: Recovery Communities of North Carolina (RCNC) for peer/advocacy perspective, or Healing Transitions for peer-run program insights.</p>
   </section>
 </main>
 
