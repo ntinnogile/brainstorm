@@ -89,7 +89,7 @@
     padding: 10px 14px;
     border-radius: 20px;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     white-space: nowrap;
     background: rgba(255,255,255,0.12);
     flex-shrink: 0;
@@ -270,35 +270,6 @@
     margin-top: 8px;
   }
 
-  .action-card {
-    background: var(--light);
-    border-radius: 10px;
-    padding: 16px;
-    margin-bottom: 14px;
-    border-left: 5px solid var(--accent);
-  }
-  .action-card h4 {
-    color: var(--primary);
-    margin: 0 0 8px 0;
-    font-size: 1.05rem;
-  }
-  .action-card .why {
-    font-size: 0.93rem;
-    margin-bottom: 8px;
-  }
-  .action-card .learn {
-    font-size: 0.92rem;
-    margin-bottom: 6px;
-  }
-  .action-card .contact {
-    font-size: 0.9rem;
-    color: #2d3748;
-    background: #edf2f7;
-    padding: 8px 10px;
-    border-radius: 6px;
-    margin-top: 8px;
-  }
-
   footer {
     text-align: center;
     padding: 20px 16px calc(20px + var(--safe-bottom));
@@ -315,7 +286,7 @@
 
   @media (min-width: 700px) {
     table { min-width: 100%; font-size: 0.91rem; }
-    nav a { font-size: 0.9rem; padding: 10px 14px; }
+    nav a { font-size: 0.92rem; padding: 10px 16px; }
   }
 </style>
 </head>
@@ -330,7 +301,6 @@
       <a href="#analysis" class="nav-link" onclick="showSection('analysis')">Analysis</a>
       <a href="#plan" class="nav-link" onclick="showSection('plan')">Plan</a>
       <a href="#cashflow" class="nav-link" onclick="showSection('cashflow')">Sample cash flow</a>
-      <a href="#action" class="nav-link" onclick="showSection('action')">Plan of Action</a>
     </nav>
   </div>
 </header>
@@ -468,10 +438,10 @@
     </div>
   </section>
 
-  <!-- 3. COMPARISON -->
+  <!-- 3. COMPARISON – BY BUSINESS SEGMENT -->
   <section id="comparison">
     <h2>Market Comparison by Segment</h2>
-    <p>Regional comparison broken out by business model. Facility-based models assume the ≤6–7 resident sweet spot.</p>
+    <p>Regional comparison broken out by business model. All facility-based models assume the ≤6–7 resident sweet spot.</p>
 
     <h3><span class="segment-label">SEGMENT</span> Senior Board & Care (RCFE)</h3>
     <div class="table-wrap">
@@ -483,7 +453,8 @@
             <th>Competition</th>
             <th>Typical Monthly Rate</th>
             <th>Startup / RE Burden</th>
-            <th>Zoning Friction</th>
+            <th>Zoning & Licensing Friction</th>
+            <th>Notes</th>
           </tr>
         </thead>
         <tbody>
@@ -494,6 +465,7 @@
             <td>$5,000–$8,500+</td>
             <td>Very High</td>
             <td>Moderate–High</td>
+            <td>Strong private-pay; city-level scrutiny possible</td>
           </tr>
           <tr>
             <td><strong>Los Angeles County</strong></td>
@@ -502,6 +474,7 @@
             <td>$4,500–$8,000+</td>
             <td>High</td>
             <td>Moderate</td>
+            <td>Largest senior population; wide rate range by neighborhood</td>
           </tr>
           <tr>
             <td><strong>San Diego County</strong></td>
@@ -510,6 +483,7 @@
             <td>$4,500–$7,500</td>
             <td>High</td>
             <td>Moderate (≤6 smoother)</td>
+            <td>Good balance of demand and livability</td>
           </tr>
           <tr>
             <td><strong>Inland Empire</strong></td>
@@ -518,6 +492,7 @@
             <td>$3,800–$6,500</td>
             <td>Moderate</td>
             <td>Lower</td>
+            <td>Better cost structure; growing senior population</td>
           </tr>
         </tbody>
       </table>
@@ -534,6 +509,7 @@
             <th>Typical Monthly Bed Rate</th>
             <th>Startup / RE Burden</th>
             <th>Zoning Friction</th>
+            <th>Notes</th>
           </tr>
         </thead>
         <tbody>
@@ -544,6 +520,7 @@
             <td>$800–$2,000+</td>
             <td>Very High</td>
             <td>High</td>
+            <td>Dense treatment pipeline; strict city permits & spacing common</td>
           </tr>
           <tr>
             <td><strong>Los Angeles County</strong></td>
@@ -552,6 +529,7 @@
             <td>$800–$1,800+</td>
             <td>High</td>
             <td>Moderate–High</td>
+            <td>Largest absolute market; neighborhood variation</td>
           </tr>
           <tr>
             <td><strong>San Diego County</strong></td>
@@ -560,6 +538,16 @@
             <td>$800–$1,500</td>
             <td>High</td>
             <td>Lower (≤6 often easier)</td>
+            <td>Better zoning position than most OC cities</td>
+          </tr>
+          <tr>
+            <td><strong>Inland Empire</strong></td>
+            <td>Moderate–High</td>
+            <td>Lower</td>
+            <td>Lower than coastal</td>
+            <td>Moderate</td>
+            <td>Lower</td>
+            <td>Lower cost base; growing recovery need</td>
           </tr>
           <tr>
             <td><strong>Wake County, NC</strong></td>
@@ -568,6 +556,7 @@
             <td>$500–$900+</td>
             <td>Moderate</td>
             <td>Moderate–High</td>
+            <td>Strong court & settlement funding pathways</td>
           </tr>
           <tr>
             <td><strong>Asheville, NC</strong></td>
@@ -576,6 +565,7 @@
             <td>$700–$900</td>
             <td>Moderate–High</td>
             <td>Moderate</td>
+            <td>Lifestyle + recovery culture appeal</td>
           </tr>
         </tbody>
       </table>
@@ -592,6 +582,7 @@
             <th>Typical Hourly Rates</th>
             <th>Startup Burden</th>
             <th>Regulatory Notes</th>
+            <th>Notes</th>
           </tr>
         </thead>
         <tbody>
@@ -601,7 +592,8 @@
             <td>High</td>
             <td>$30–$45+/hr</td>
             <td>Low–Moderate</td>
-            <td>HCO + business license</td>
+            <td>HCO registration + business license</td>
+            <td>Affluent private-pay base; caregiver wages higher</td>
           </tr>
           <tr>
             <td><strong>Los Angeles County</strong></td>
@@ -609,7 +601,8 @@
             <td>High</td>
             <td>$28–$42+/hr</td>
             <td>Low–Moderate</td>
-            <td>HCO + business license</td>
+            <td>HCO + local business license</td>
+            <td>Huge market; strong hospital referral potential</td>
           </tr>
           <tr>
             <td><strong>San Diego County</strong></td>
@@ -618,6 +611,16 @@
             <td>$28–$40/hr</td>
             <td>Low–Moderate</td>
             <td>HCO + business license</td>
+            <td>Solid private-pay and referral environment</td>
+          </tr>
+          <tr>
+            <td><strong>Inland Empire</strong></td>
+            <td>Moderate–High</td>
+            <td>Moderate</td>
+            <td>$25–$35/hr</td>
+            <td>Lower</td>
+            <td>HCO + business license</td>
+            <td>Lower operating costs; growing demand</td>
           </tr>
         </tbody>
       </table>
@@ -627,7 +630,7 @@
   <!-- 4. ANALYSIS -->
   <section id="analysis">
     <h2>Overall Analysis</h2>
-    <p>California has strong demand but high real-estate costs and uneven local zoning. North Carolina (especially Wake County) currently offers a lower-capital alternative with simpler statewide rules for non-clinical sober living. The ≤6–7 resident size remains the practical sweet spot.</p>
+    <p>California has strong demand from both aging demographics and the recovery pipeline, but also the highest real-estate costs and very uneven local zoning. The ≤6–7 resident size remains the practical sweet spot for facility-based models. North Carolina (especially Wake County) currently offers a lower-capital alternative with simpler statewide rules for non-clinical sober living.</p>
 
     <div class="table-wrap">
       <table>
@@ -669,7 +672,7 @@
     </div>
   </section>
 
-  <!-- 5. BUSINESS PLAN -->
+  <!-- 5. BUSINESS PLAN + BOTTOM LINE -->
   <section id="plan">
     <h2>Business Plan & Bottom Line</h2>
 
@@ -700,17 +703,17 @@
           <tr>
             <td>Senior Board & Care</td>
             <td>Administrator + 1–2 caregivers; overnight coverage</td>
-            <td>Administrator may be owner.</td>
+            <td>Administrator may be owner. Ratios driven by acuity.</td>
           </tr>
           <tr>
             <td>Sober Living</td>
-            <td>House Manager (often live-in)</td>
+            <td>House Manager (often live-in) ± part-time help</td>
             <td>Peer accountability reduces clinical staffing need.</td>
           </tr>
           <tr>
             <td>In-Home Care</td>
-            <td>Scheduler + pool of caregivers</td>
-            <td>No residential staff.</td>
+            <td>Scheduler / coordinator + pool of caregivers</td>
+            <td>No residential staff; caregivers work in client homes.</td>
           </tr>
         </tbody>
       </table>
@@ -718,66 +721,233 @@
 
     <div class="bottom-line">
       <h3>Bottom Line — Ranked Easiest to Hardest</h3>
-      <p>For a first-time operator targeting ≤6–7 residents:</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Model</th>
-              <th>Summary</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="rank-easy">1</td>
-              <td><strong>In-Home Care</strong></td>
-              <td>Lowest capital, fastest launch, no facility.</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td><strong>Sober Living</strong></td>
-              <td>No state license if non-clinical; referral & zoning are the main work.</td>
-            </tr>
-            <tr>
-              <td class="rank-hard">3</td>
-              <td><strong>Senior Board & Care</strong></td>
-              <td>Full RCFE licensing + highest revenue potential.</td>
-            </tr>
-          </tbody>
-        </table>
+      <p>Rankings assume a first-time or small operator targeting ≤6–7 residents.</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('overall')">Overall Ease</button>
+        <button class="tab-btn" onclick="showTab('time')">By Time</button>
+        <button class="tab-btn" onclick="showTab('capital')">By Capital</button>
+        <button class="tab-btn" onclick="showTab('regulation')">By Regulation</button>
       </div>
+
+      <div id="overall" class="tab-content active">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Model</th>
+                <th>Time</th>
+                <th>Effort</th>
+                <th>Regulation</th>
+                <th>Capital</th>
+                <th>Summary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rank-easy">1 (Easiest)</td>
+                <td><strong>In-Home Care</strong></td>
+                <td>Fast</td>
+                <td>High ongoing</td>
+                <td>Low–Mod</td>
+                <td>Lowest</td>
+                <td>No facility. Fastest path to first revenue.</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><strong>Sober Living</strong></td>
+                <td>Moderate</td>
+                <td>Moderate</td>
+                <td>Low state / High local (esp. OC)</td>
+                <td>Moderate</td>
+                <td>No state license if non-clinical; referral & zoning heavy.</td>
+              </tr>
+              <tr>
+                <td class="rank-hard">3 (Hardest)</td>
+                <td><strong>Senior Board & Care</strong></td>
+                <td>Longest</td>
+                <td>High</td>
+                <td>Highest</td>
+                <td>Moderate–High</td>
+                <td>Full RCFE licensing + care responsibility. Highest revenue potential.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="time" class="tab-content">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Rank</th><th>Model</th><th>Time to First Resident</th><th>Key Delay Drivers</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rank-easy">1</td>
+                <td>In-Home Care</td>
+                <td>4–12 weeks</td>
+                <td>HCO registration, caregiver recruiting, first clients</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Sober Living</td>
+                <td>8–20 weeks</td>
+                <td>Property + local permits + referral pipeline</td>
+              </tr>
+              <tr>
+                <td class="rank-hard">3</td>
+                <td>Senior Board & Care</td>
+                <td>4–9+ months</td>
+                <td>Administrator cert, CDSS application, fire clearance, inspection</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="capital" class="tab-content">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Rank</th><th>Model</th><th>Relative Capital</th><th>Main Cost Drivers</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rank-easy">1</td>
+                <td>In-Home Care</td>
+                <td>Lowest</td>
+                <td>Working capital, marketing, initial caregiver payroll</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Sober Living</td>
+                <td>Moderate</td>
+                <td>Lease deposits, furnishing, reserves, possible permit costs</td>
+              </tr>
+              <tr>
+                <td class="rank-hard">3</td>
+                <td>Senior Board & Care</td>
+                <td>Moderate–High</td>
+                <td>Same as sober living + licensing costs, higher insurance, care equipment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="regulation" class="tab-content">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Rank</th><th>Model</th><th>Regulatory Load</th><th>Primary Bodies & Hurdles</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rank-easy">1</td>
+                <td>In-Home Care</td>
+                <td>Low–Moderate</td>
+                <td>CDSS HCO + background checks</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Sober Living</td>
+                <td>Low state / High local</td>
+                <td>No state license if non-clinical; local zoning is the main variable</td>
+              </tr>
+              <tr>
+                <td class="rank-hard">3</td>
+                <td>Senior Board & Care</td>
+                <td>Highest</td>
+                <td>Full CDSS RCFE license, Administrator certification, ongoing surveys</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p style="margin-top:1.25rem;"><strong>Final guidance:</strong> Match the model to your capital, timeline, and willingness to manage care versus housing. For most first-time operators, <strong>In-Home Care</strong> or non-clinical <strong>Sober Living</strong> at ≤6 residents are the more accessible on-ramps. <strong>Senior Board & Care</strong> rewards those prepared for full licensing with higher per-resident revenue and longer stays.</p>
     </div>
   </section>
 
-  <!-- 6. SAMPLE CASH FLOW -->
+  <!-- 6. SAMPLE CASH FLOW (NEW) -->
   <section id="cashflow">
     <h2>Sober Living, lease path sample cash flow</h2>
-    <p>Illustrative figures for a <strong>6-bed non-clinical recovery residence</strong> on a lease path (2025–2026 ranges).</p>
+    <p>Illustrative figures for a <strong>6-bed non-clinical recovery residence</strong> on a lease path. All numbers are realistic 2025–2026 ranges for planning purposes only. Actual results will vary by property, rates, and execution.</p>
 
-    <h3>Startup Cost Comparison (Lease Path)</h3>
+    <h3>1. Startup Cost Comparison (Lease Path)</h3>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
             <th>Cost Category</th>
-            <th>Wake County</th>
-            <th>Asheville</th>
-            <th>San Diego</th>
+            <th>Wake County / Raleigh</th>
+            <th>Asheville / Buncombe</th>
+            <th>San Diego County</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Total Cash to Open (est.)</td>
-            <td><strong>$21k – $34k</strong></td>
-            <td><strong>$23k – $37k</strong></td>
-            <td><strong>$36k – $60k+</strong></td>
+            <td>Security deposit + first month</td>
+            <td>$4,500 – $7,000</td>
+            <td>$5,000 – $8,000</td>
+            <td>$9,000 – $15,000+</td>
+          </tr>
+          <tr>
+            <td>Furnishings & setup</td>
+            <td>$6,000 – $9,000</td>
+            <td>$6,500 – $10,000</td>
+            <td>$8,000 – $12,000</td>
+          </tr>
+          <tr>
+            <td>Supplies, linens, testing kits</td>
+            <td>$1,200 – $2,000</td>
+            <td>$1,200 – $2,000</td>
+            <td>$1,500 – $2,500</td>
+          </tr>
+          <tr>
+            <td>Utility deposits + internet</td>
+            <td>$600 – $1,000</td>
+            <td>$600 – $1,000</td>
+            <td>$800 – $1,400</td>
+          </tr>
+          <tr>
+            <td>Entity + legal</td>
+            <td>$1,000 – $2,000</td>
+            <td>$1,000 – $2,000</td>
+            <td>$1,500 – $3,000</td>
+          </tr>
+          <tr>
+            <td>Certification / insurance setup</td>
+            <td>$800 – $1,500</td>
+            <td>$800 – $1,500</td>
+            <td>$1,200 – $2,500</td>
+          </tr>
+          <tr>
+            <td>Marketing & launch</td>
+            <td>$800 – $1,500</td>
+            <td>$800 – $1,500</td>
+            <td>$1,500 – $3,000</td>
+          </tr>
+          <tr>
+            <td>Operating reserve (2–3 mo)</td>
+            <td>$6,000 – $10,000</td>
+            <td>$7,000 – $11,000</td>
+            <td>$12,000 – $20,000</td>
+          </tr>
+          <tr>
+            <td><strong>Total Cash to Open (est.)</strong></td>
+            <td><strong>$21,000 – $34,000</strong></td>
+            <td><strong>$23,000 – $37,000</strong></td>
+            <td><strong>$36,000 – $60,000+</strong></td>
           </tr>
         </tbody>
       </table>
     </div>
+    <p class="note">North Carolina markets typically require 40–50% less startup capital than San Diego on a lease path.</p>
 
-    <h3>Monthly Pro Forma (Stabilized ~85% occupancy)</h3>
+    <h3>2. Monthly Operating Pro Forma (Stabilized at ~85% occupancy)</h3>
     <div class="table-wrap">
       <table>
         <thead>
@@ -790,112 +960,174 @@
         </thead>
         <tbody>
           <tr>
-            <td>Gross Monthly Revenue</td>
-            <td>~$3,825</td>
-            <td>~$4,182</td>
-            <td>~$5,865</td>
+            <td>Average bed rate</td>
+            <td>$750</td>
+            <td>$820</td>
+            <td>$1,150</td>
           </tr>
           <tr>
-            <td>Est. Net Operating Income</td>
-            <td>–$500 to +$1,200</td>
-            <td>–$300 to +$1,400</td>
-            <td>–$1,000 to +$2,200</td>
+            <td>Occupied beds (85% of 6)</td>
+            <td>5.1</td>
+            <td>5.1</td>
+            <td>5.1</td>
+          </tr>
+          <tr>
+            <td><strong>Gross Monthly Revenue</strong></td>
+            <td><strong>$3,825</strong></td>
+            <td><strong>$4,182</strong></td>
+            <td><strong>$5,865</strong></td>
+          </tr>
+          <tr>
+            <td>Rent (4–5 BR house)</td>
+            <td>$2,200 – $2,800</td>
+            <td>$2,300 – $2,900</td>
+            <td>$3,800 – $5,200</td>
+          </tr>
+          <tr>
+            <td>Utilities + internet</td>
+            <td>$450 – $600</td>
+            <td>$450 – $650</td>
+            <td>$550 – $750</td>
+          </tr>
+          <tr>
+            <td>House manager stipend</td>
+            <td>$800 – $1,200</td>
+            <td>$800 – $1,200</td>
+            <td>$1,200 – $1,800</td>
+          </tr>
+          <tr>
+            <td>Food / household / testing</td>
+            <td>$400 – $600</td>
+            <td>$400 – $600</td>
+            <td>$500 – $700</td>
+          </tr>
+          <tr>
+            <td>Insurance</td>
+            <td>$250 – $400</td>
+            <td>$250 – $400</td>
+            <td>$400 – $650</td>
+          </tr>
+          <tr>
+            <td>Maintenance & misc.</td>
+            <td>$250 – $400</td>
+            <td>$250 – $400</td>
+            <td>$350 – $500</td>
+          </tr>
+          <tr>
+            <td>Marketing / admin</td>
+            <td>$150 – $300</td>
+            <td>$150 – $300</td>
+            <td>$250 – $450</td>
+          </tr>
+          <tr>
+            <td><strong>Total Monthly Expenses</strong></td>
+            <td><strong>$4,500 – $6,300</strong></td>
+            <td><strong>$4,600 – $6,450</strong></td>
+            <td><strong>$7,050 – $10,050</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Est. Net Operating Income</strong></td>
+            <td><strong>–$500 to +$1,200</strong></td>
+            <td><strong>–$300 to +$1,400</strong></td>
+            <td><strong>–$1,000 to +$2,200</strong></td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <h3>12-Month Cash-Flow Ramp (Wake County Example)</h3>
+    <h3>3. 12-Month Cash-Flow Ramp (Wake County Example)</h3>
+    <p>Conservative occupancy build for a new 6-bed home. Early months focus on proving reliability to referral partners.</p>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
             <th>Month</th>
             <th>Occupied Beds</th>
+            <th>Occupancy</th>
             <th>Revenue</th>
+            <th>Expenses</th>
             <th>Net Cash Flow</th>
             <th>Cumulative</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>1</td><td>1.5</td><td>$1,125</td><td>–$4,075</td><td>–$4,075</td></tr>
-          <tr><td>3</td><td>3.5</td><td>$2,625</td><td>–$2,775</td><td>–$10,275</td></tr>
-          <tr><td>6</td><td>5.0</td><td>$3,750</td><td>–$1,950</td><td>–$16,950</td></tr>
-          <tr><td>9</td><td>5.3</td><td>$3,975</td><td>–$1,725</td><td>–$22,350</td></tr>
-          <tr><td>12</td><td>5.5</td><td>$4,125</td><td>–$1,575</td><td>–$27,150</td></tr>
+          <tr><td>1</td><td>1.5</td><td>25%</td><td>$1,125</td><td>$5,200</td><td>–$4,075</td><td>–$4,075</td></tr>
+          <tr><td>2</td><td>2.5</td><td>42%</td><td>$1,875</td><td>$5,300</td><td>–$3,425</td><td>–$7,500</td></tr>
+          <tr><td>3</td><td>3.5</td><td>58%</td><td>$2,625</td><td>$5,400</td><td>–$2,775</td><td>–$10,275</td></tr>
+          <tr><td>4</td><td>4.0</td><td>67%</td><td>$3,000</td><td>$5,500</td><td>–$2,500</td><td>–$12,775</td></tr>
+          <tr><td>5</td><td>4.5</td><td>75%</td><td>$3,375</td><td>$5,600</td><td>–$2,225</td><td>–$15,000</td></tr>
+          <tr><td>6</td><td>5.0</td><td>83%</td><td>$3,750</td><td>$5,700</td><td>–$1,950</td><td>–$16,950</td></tr>
+          <tr><td>7</td><td>5.1</td><td>85%</td><td>$3,825</td><td>$5,700</td><td>–$1,875</td><td>–$18,825</td></tr>
+          <tr><td>8</td><td>5.2</td><td>87%</td><td>$3,900</td><td>$5,700</td><td>–$1,800</td><td>–$20,625</td></tr>
+          <tr><td>9</td><td>5.3</td><td>88%</td><td>$3,975</td><td>$5,700</td><td>–$1,725</td><td>–$22,350</td></tr>
+          <tr><td>10</td><td>5.4</td><td>90%</td><td>$4,050</td><td>$5,700</td><td>–$1,650</td><td>–$24,000</td></tr>
+          <tr><td>11</td><td>5.5</td><td>92%</td><td>$4,125</td><td>$5,700</td><td>–$1,575</td><td>–$25,575</td></tr>
+          <tr><td>12</td><td>5.5</td><td>92%</td><td>$4,125</td><td>$5,700</td><td>–$1,575</td><td>–$27,150</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note">Budget roughly $25k–$30k of cumulative negative cash flow in Year 1 on top of startup capital. Many operators reach consistent positive cash flow in months 13–18.</p>
-  </section>
+    <p class="note">Expect to fund roughly $25k–$30k of cumulative negative cash flow in Year 1 (in addition to startup capital). Many operators reach consistent positive monthly cash flow in months 13–18.</p>
 
-  <!-- 7. PLAN OF ACTION (NEW) -->
-  <section id="action">
-    <h2>Plan of Action — Raleigh / Wake County Market Research</h2>
-    <p>If you are targeting sober living in the Raleigh area, start with these three organizations. They give the highest-signal insights on demand, referral standards, and real-world supply gaps.</p>
-
-    <div class="action-card">
-      <h4>1. Wake County Recovery Court</h4>
-      <p class="why"><strong>Why contact them first:</strong> Participants can be court-ordered into a sober living environment. This is one of the most direct and structured sources of demand in the county.</p>
-      <p class="learn"><strong>What you can learn:</strong></p>
-      <ul>
-        <li>Monthly / quarterly placement volume into sober living</li>
-        <li>Preferred house characteristics (size, rules, manager model, MAT-friendly status)</li>
-        <li>What makes them recommend one residence over another</li>
-        <li>Current gaps in local supply</li>
-      </ul>
-      <div class="contact">
-        <strong>Location:</strong> Wake County Courthouse, 4th Floor, Suite 412<br>
-        316 Fayetteville St, Raleigh, NC 27601
-      </div>
-    </div>
-
-    <div class="action-card">
-      <h4>2. SouthLight Healthcare (Raleigh Hub)</h4>
-      <p class="why"><strong>Why contact them:</strong> Major local treatment provider (outpatient, MAT/opioid treatment, intensive outpatient). They are also the substance-use treatment provider for Wake County Recovery Court, so they sit at the intersection of clinical care and court-involved clients who need step-down housing.</p>
-      <p class="learn"><strong>What you can learn:</strong></p>
-      <ul>
-        <li>Volume of clients discharging who need sober living</li>
-        <li>Typical client profiles and length-of-stay preferences</li>
-        <li>What referral partners actually look for in a recovery residence</li>
-        <li>Pain points with existing local housing options</li>
-      </ul>
-      <div class="contact">
-        <strong>Location:</strong> 2101 Garner Rd, Raleigh, NC 27610<br>
-        <strong>Phone:</strong> 919-787-6131
-      </div>
-    </div>
-
-    <div class="action-card">
-      <h4>3. Emmaus House of Raleigh <span style="font-weight:500;">(or Fellowship Home of Raleigh)</span></h4>
-      <p class="why"><strong>Why contact them:</strong> Established, operating recovery residences in Raleigh. Both appear as named partners in Wake County’s opioid-settlement Recovery Housing Support funding. Talking to an actual operator gives ground-level reality on occupancy, rates, resident mix, competition (including Oxford Houses), and day-to-day challenges.</p>
-      <p class="learn"><strong>What you can learn:</strong></p>
-      <ul>
-        <li>Real occupancy patterns and pricing</li>
-        <li>Resident profiles and common challenges</li>
-        <li>How they interact with courts and treatment providers</li>
-        <li>Where the biggest local gaps currently sit</li>
-      </ul>
-      <div class="contact">
-        <strong>Emmaus House starting point:</strong> 10 N. East Street, Raleigh, NC 27601<br>
-        <strong>Phone:</strong> 919-327-2229<br>
-        <em>Alternative: Fellowship Home of Raleigh (Men’s: 919-833-6030)</em>
-      </div>
+    <h3>4. Ease of Operations Snapshot</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Wake County</th>
+            <th>Asheville</th>
+            <th>San Diego</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>State regulatory burden</td>
+            <td>Very Low</td>
+            <td>Very Low</td>
+            <td>Low</td>
+          </tr>
+          <tr>
+            <td>Local zoning effort</td>
+            <td>Moderate–High</td>
+            <td>Moderate</td>
+            <td>Lower (≤6 often smoother)</td>
+          </tr>
+          <tr>
+            <td>Staffing difficulty</td>
+            <td>Moderate</td>
+            <td>Moderate</td>
+            <td>Higher</td>
+          </tr>
+          <tr>
+            <td>Referral development</td>
+            <td>Strong public/court pathways</td>
+            <td>Relationship-driven</td>
+            <td>High volume but competitive</td>
+          </tr>
+          <tr>
+            <td>Time to first positive cash flow</td>
+            <td>Often fastest</td>
+            <td>Moderate</td>
+            <td>Usually slower</td>
+          </tr>
+          <tr>
+            <td><strong>Overall operational ease</strong></td>
+            <td><strong>Highest</strong></td>
+            <td><strong>High</strong></td>
+            <td><strong>Moderate</strong></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="highlight">
-      <strong>Suggested sequence:</strong><br>
-      1. Wake County Recovery Court (demand + standards)<br>
-      2. SouthLight Healthcare (treatment discharge pipeline)<br>
-      3. Emmaus House or Fellowship Home (real-world supply & operations)
+      <strong>Planning takeaway:</strong> Budget $50k–$65k total liquid capital for a Wake County 6-bed leased home (startup + first-year cash-flow buffer). San Diego requires meaningfully more capital and has a steeper early burn rate despite higher per-bed revenue.
     </div>
-
-    <p class="note">Secondary options if needed: Recovery Communities of North Carolina (RCNC) for peer/advocacy perspective, or Healing Transitions for peer-run program insights.</p>
   </section>
 </main>
 
 <footer>
-  <p>Informational only • Verify all licenses, zoning, staffing ratios, and financials with qualified local professionals • Baseline assumes ≤6–7 residents • Data reflects 2025–2026 research</p>
+  <p>Informational only • Verify all licenses, zoning, staffing ratios, and financials with qualified local professionals and the relevant governing bodies • Baseline assumes ≤6–7 residents • Data reflects 2025–2026 research</p>
 </footer>
 
 <script>
